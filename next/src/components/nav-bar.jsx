@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { User } from "lucide-react";
 import { LayoutDashboard } from "lucide-react";
 import { NotebookPen } from "lucide-react";
@@ -15,7 +16,9 @@ function NavBar({ currentPage = "dashboard" }) {
               : "text-gray-600 hover:text-gray-800"
           }`}
         >
-          <LayoutDashboard size={20} />
+          <Link href="/dashboard">
+            <LayoutDashboard size={20} />
+          </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
@@ -24,7 +27,9 @@ function NavBar({ currentPage = "dashboard" }) {
               : "text-gray-600 hover:text-gray-800"
           }`}
         >
-          <NotebookPen size={20} />
+          <Link href="/journals">
+            <NotebookPen size={20} />
+          </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
@@ -33,7 +38,9 @@ function NavBar({ currentPage = "dashboard" }) {
               : "text-gray-600 hover:text-gray-800"
           }`}
         >
-          <BookOpenCheck size={20} />
+          <Link href="/blogs">
+            <BookOpenCheck size={20} />
+          </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
@@ -42,7 +49,9 @@ function NavBar({ currentPage = "dashboard" }) {
               : "text-gray-600 hover:text-gray-800"
           }`}
         >
-          <User size={20} />
+          <Link href="/profile">
+            <User size={20} />
+          </Link>
         </li>
       </ul>
     </nav>
