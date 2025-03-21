@@ -5,39 +5,20 @@ import { BookOpenCheck } from "lucide-react";
 
 function NavBar() {
   return (
-    <nav className="bg-bg-[var(--background)] h-screen w-64 p-6 fixed ">
-      <ul className="flex flex-col space-y-4 list-none font-semibold">
+    <nav className="bg-bg-[var(--background)] h-screen w-16 p-6 fixed border-r border-[var(--border)]">
+      <ul className="flex flex-col space-y-4 list-none font-semibold items-center">
         <li className="hover:text-gray-600 transition-all duration-300">
-          <div className="flex items-center">
-            <span>Dashboard</span>
-            <span className="ml-1">
-              <LayoutDashboard size={20} />
-            </span>
-          </div>
+          <LayoutDashboard size={20} />
+          {/* <div className="flex items-center"> */}
         </li>
         <li className="hover:text-gray-600 transition-all duration-300">
-          <div className="flex items-center">
-            <span>Journals</span>
-            <span className="ml-1">
-              <NotebookPen size={20} />
-            </span>
-          </div>
+          <NotebookPen size={20} />
         </li>
         <li className="hover:text-gray-600 transition-all duration-300">
-          <div className="flex items-center">
-            <span>Blogs</span>
-            <span className="ml-1">
-              <BookOpenCheck size={20} />
-            </span>
-          </div>
+          <BookOpenCheck size={20} />
         </li>
         <li className="hover:text-gray-600 transition-all duration-300">
-          <div className="flex items-center">
-            <span>Profile</span>
-            <span className="ml-1">
-              <User size={20} />
-            </span>
-          </div>
+          <User size={20} />
         </li>
       </ul>
     </nav>
