@@ -1,3 +1,8 @@
+import { User } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
+import { NotebookPen } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
+
 function NavBar() {
   return (
     <nav className="flex flex-col space-x-8 list-none font-semibold">
