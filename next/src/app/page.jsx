@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { SmilePlus } from "lucide-react";
 import { WarpBackground } from "@components/magicui/warp-background";
+import { DotPattern } from "@components/magicui/dot-pattern";
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
