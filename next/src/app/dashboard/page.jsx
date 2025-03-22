@@ -6,7 +6,7 @@ function DashboardPage() {
   return (
     <div className="flex min-h-screen">
       <NavBar />
-      <div className="flex flex-col ml-16 w-full">
+      <div className="flex flex-col ml-20 w-full">
         <Header />
         <main className="flex-grow px-8 py-8">
           <h1 className="text-3xl font-bold mb-6">Dashboard</h1>

@@ -7,8 +7,8 @@ import { BookOpenCheck } from "lucide-react";
 function NavBar({ currentPage = "dashboard" }) {
   const isActive = (page) => currentPage === page;
   return (
-    <nav className="bg-[var(--background)] h-screen w-16 p-6 fixed border-r border-[var(--border)]">
-      <ul className="flex flex-col space-y-4 list-none font-semibold items-center">
+    <nav className="bg-[var(--background)] h-screen w-20 p-6 fixed border-r border-[var(--border)]">
+      <ul className="flex flex-col space-y-8 list-none font-semibold items-center">
         <li
           className={`transition-all duration-300 ${
             isActive("dashboard")
@@ -17,7 +17,7 @@ function NavBar({ currentPage = "dashboard" }) {
           }`}
         >
           <Link href="/dashboard">
-            <LayoutDashboard size={20} />
+            <LayoutDashboard size={30} />
           </Link>
         </li>
         <li
@@ -28,7 +28,7 @@ function NavBar({ currentPage = "dashboard" }) {
           }`}
         >
           <Link href="/journals">
-            <NotebookPen size={20} />
+            <NotebookPen size={30} />
           </Link>
         </li>
         <li
@@ -39,7 +39,7 @@ function NavBar({ currentPage = "dashboard" }) {
           }`}
         >
           <Link href="/blogs">
-            <BookOpenCheck size={20} />
+            <BookOpenCheck size={30} />
           </Link>
         </li>
         <li
@@ -50,7 +50,7 @@ function NavBar({ currentPage = "dashboard" }) {
           }`}
         >
           <Link href="/profile">
-            <User size={20} />
+            <User size={30} />
           </Link>
         </li>
       </ul>
