@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { SmilePlus } from "lucide-react";
 import { WarpBackground } from "@components/magicui/warp-background";
-import { DotPattern } from "@components/magicui/dot-pattern";
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
@@ -35,13 +36,17 @@ export default function Home() {
             <SmilePlus size={400} />
           </div>
         </div>
-        <div className="mt-16 w-full flex flex-col space-y-5 justify-center items-start ml-15">
-          <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
-            HEY, I AM A NEW USER!
-          </button>
-          <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
-            I ALREADY HAVE AN ACCOUNT
-          </button>
+        <div className="mt-10 w-full flex flex-col space-y-5 justify-center items-start ml-15">
+          <Link href={"/signup"}>
+            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+              HEY, I AM A NEW USER!
+            </button>
+          </Link>
+          <Link href={"/login"}>
+            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+              I ALREADY HAVE AN ACCOUNT
+            </button>
+          </Link>
         </div>
       </div>
     </WarpBackground>
