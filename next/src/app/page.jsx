@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SmilePlus } from "lucide-react";
 import { WarpBackground } from "@components/magicui/warp-background";
+import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -38,13 +40,19 @@ export default function Home() {
         </div>
         <div className="mt-10 w-full flex flex-col space-y-5 justify-center items-start ml-15">
           <Link href={"/signup"}>
-            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300 flex items-center group">
               HEY, I AM A NEW USER!
+              <span className=" text-white ml-2 hidden group-hover:inline-flex transition-all duration-300">
+                <ArrowRight size={20} />
+              </span>
             </button>
           </Link>
           <Link href={"/login"}>
-            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+            <button className="p-4 bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300 flex items-center group">
               I ALREADY HAVE AN ACCOUNT
+              <span className="text-white ml-2 hidden group-hover:inline-flex transition-all duration-300">
+                <ArrowRight size={20} />
+              </span>
             </button>
           </Link>
         </div>
