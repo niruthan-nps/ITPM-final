@@ -4,7 +4,6 @@ import Link from "next/link";
 import { SmilePlus } from "lucide-react";
 import { WarpBackground } from "@components/magicui/warp-background";
 import { ArrowRight } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
