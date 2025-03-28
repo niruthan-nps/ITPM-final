@@ -26,11 +26,12 @@ export default function Home() {
         <div className="mt-10 w-full flex justify-between items-center">
           <div className="flex flex-col justify-center items-left w-1/2 text-left ">
             <p className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent text-3xl font-bold ml-15">
-              A Private Space For You!
+              A Private Space Just For You!
             </p>
             <p className="text-gray-600 font-mono font-semibold mt-4 ml-15">
-              Mindcare is a private space to maintain your mental health. Track
-              your mood, journal entries, and more. We are here to help you!
+              Mindcare is a private space to <b>maintain your mental health</b>.
+              Track your mood, journal entries, and more. We are here to help
+              you!
             </p>
           </div>
           <div className="flex flex-col justify-center items-center w-1/2 text-purple-500">
