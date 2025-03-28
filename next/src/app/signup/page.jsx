@@ -1,5 +1,5 @@
 import { SmilePlus } from "lucide-react";
-import { WarpBackground } from "@components/magicui/warp-background";
+
 function SignUp() {
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
@@ -18,17 +18,17 @@ function SignUp() {
             </label>
             <input
               type="text"
-              className="w-full p-3 bg-gray-100 border border-purple-200 rounded-md focus:outline-none focus:border-purple-500"
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+              required
             />
           </div>
-
           <div className="flex-1">
             <label className="block text-purple-500 font-mono font-semibold mb-2">
               Last Name
             </label>
             <input
               type="text"
-              className="w-full p-3 bg-gray-100 border border-purple-200 rounded-md focus:outline-none focus:border-purple-500"
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             />
           </div>
         </div>
@@ -39,16 +39,31 @@ function SignUp() {
           </label>
           <input
             type="email"
-            className="w-full p-3 bg-gray-100 border border-purple-200 rounded-md focus:outline-none focus:border-purple-500"
+            className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+            required
           />
         </div>
 
-        <div className="flex w-full space-x-4">
+        <div className="w-full">
+          <label className="block text-purple-500 font-mono font-semibold mb-2">
+            Password
+          </label>
+          <input
+            type="password"
+            className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+            required
+          />
+        </div>
+
+        <div className="flex w-full space-x-14">
           <div className="flex-1">
             <label className="block text-purple-500 font-mono font-semibold mb-2">
               Gender
             </label>
-            <select className="w-full p-3 bg-gray-100 border border-purple-200 rounded-md focus:outline-none focus:border-purple-500 text-gray-700">
+            <select
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+              required
+            >
               <option value="">Select Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -56,15 +71,59 @@ function SignUp() {
             </select>
           </div>
 
-          <div className="flex-1">
-            <label className="block text-purple-500 font-mono font-semibold mb-2">
+          <div className="flex-none w-1/4">
+            <label
+              className="block text-purple-500 font-mono font-semibold mb-2"
+              required
+            >
               Age
             </label>
             <input
               type="text"
-              className="w-full p-3 bg-gray-100 border border-purple-200 rounded-md focus:outline-none focus:border-purple-500"
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+              required
             />
           </div>
+        </div>
+
+        <div className="flex w-full space-x-4">
+          <div className="flex-1">
+            <label className="block text-purple-500 font-mono font-semibold mb-2">
+              Country
+            </label>
+            <input
+              type="text"
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+              required
+            />
+          </div>
+          <div className="flex-1">
+            <label className="block text-purple-500 font-mono font-semibold mb-2">
+              City
+            </label>
+            <input
+              type="text"
+              className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="w-full">
+          <label className="block text-purple-500 font-mono font-semibold mb-2">
+            Occupation
+          </label>
+          <input
+            type="text"
+            className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
+            required
+          />
+        </div>
+
+        <div className="w-full mt-3.5">
+          <button className="p-3 w-full bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+            Sign Up
+          </button>
         </div>
       </form>
     </div>
