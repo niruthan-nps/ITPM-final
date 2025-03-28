@@ -1,6 +1,6 @@
 import { SmilePlus } from "lucide-react";
 
-function SignUp() {
+function SignUpPage() {
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
       <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
@@ -129,4 +129,4 @@ function SignUp() {
     </div>
   );
 }
-export default SignUp;
+export default SignUpPage;
