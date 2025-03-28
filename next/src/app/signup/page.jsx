@@ -3,7 +3,7 @@ import { SmilePlus } from "lucide-react";
 function SignUp() {
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
-      <form className="w-full max-w-xl rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
+      <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
         <div className="flex w-full justify-center items-center mb-6">
           <p className="text-4xl font-bold bg-gradient-to-br from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent">
             mindcare
