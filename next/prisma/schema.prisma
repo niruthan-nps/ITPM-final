@@ -29,6 +29,9 @@ model User {
   country     String
   city        String
   occupation  String
+  totalBlogs  Int @default(0)
+  totalJournals Int @default(0)
+  totalComments Int @default(0)
   mentalstate MentalHealthState? @default(positive)
   createdAt   DateTime @default(now())
 }
