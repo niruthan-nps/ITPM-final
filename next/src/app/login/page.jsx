@@ -1,5 +1,29 @@
+"use client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import axios from "axios";
 import { SmilePlus } from "lucide-react";
+
 function LoginPage() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("/api/auth/login", formData);
+      localStorage.setItem("token", response.data.token);
+      alert("Login successful!");
+      router.push("/");
+    } catch (error) {
+      alert(error.response?.data.error || "Invalid credentials!");
+    }
+  };
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
       <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
