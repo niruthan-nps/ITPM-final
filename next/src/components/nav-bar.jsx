@@ -7,7 +7,7 @@ import { BookOpenCheck } from "lucide-react";
 function NavBar({ currentPage = "dashboard" }) {
   const isActive = (page) => currentPage === page;
   return (
-    <nav className="bg-[var(--background)] h-screen w-20 p-6 fixed border-r border-[var(--border)]">
+    <nav className="bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 h-screen w-20 p-6 fixed ">
       <ul className="flex flex-col space-y-8 list-none font-semibold items-center">
         <li
           className={`transition-all duration-300 ${
