@@ -4,6 +4,19 @@ import Header from "@components/header";
 import Footer from "@components/footer";
 import UserRouteProtection from "@components/user-route";
 
+import { Brain } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
+import { NotebookPen } from "lucide-react";
+import { MessageSquare } from "lucide-react";
+
+const user = {
+  firstName: "Alex",
+  totalBlogs: 24,
+  totalJournals: 37,
+  totalComments: 53,
+  mentalHealthState: "Positive",
+};
+
 function DashboardPage() {
   return (
     <UserRouteProtection>
@@ -12,11 +25,63 @@ function DashboardPage() {
         <div className="flex flex-col ml-20 w-full">
           <Header />
           <main className="flex-grow px-8 py-8">
-            <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
-            <p className="mb-4">
-              Welcome to your Mental Health Tracker. Track your mood, journal
-              entries, and more.
-            </p>
+            <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 rounded-xl shadow-md p-6 max-w-full">
+              <div className="top-6 right-6">
+                <p className="text-lg font-medium text-purple-700">
+                  Hey, {user.firstName}!
+                </p>
+              </div>
+
+              <h1 className="text-3xl font-bold mb-10">Dashboard</h1>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                {/* Blogs Stats */}
+                <div className="bg-white rounded-lg shadow p-5 flex flex-col items-center">
+                  <div className="bg-purple-100 p-3 rounded-full mb-4">
+                    <BookOpenCheck size={24} className="text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">Total Blogs</h3>
+                  <p className="text-3xl font-bold text-purple-600">
+                    {user.totalBlogs}
+                  </p>
+                </div>
+
+                {/* Journals Stats */}
+                <div className="bg-white rounded-lg shadow p-5 flex flex-col items-center">
+                  <div className="bg-blue-100 p-3 rounded-full mb-4">
+                    <NotebookPen size={24} className="text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">
+                    Journals Written
+                  </h3>
+                  <p className="text-3xl font-bold text-blue-600">
+                    {user.totalJournals}
+                  </p>
+                </div>
+
+                {/* Comments Stats */}
+                <div className="bg-white rounded-lg shadow p-5 flex flex-col items-center">
+                  <div className="bg-indigo-100 p-3 rounded-full mb-4">
+                    <MessageSquare size={24} className="text-indigo-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">Comments Made</h3>
+                  <p className="text-3xl font-bold text-indigo-600">
+                    {user.totalComments}
+                  </p>
+                </div>
+
+                {/* Mental Health State */}
+                <div className="bg-white rounded-lg shadow p-5 flex flex-col items-center">
+                  <div className="bg-green-100 p-3 rounded-full mb-4">
+                    <Brain size={24} className="text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">Mental Health</h3>
+                  <p className="text-3xl font-bold text-green-600">
+                    {user.mentalHealthState}
+                  </p>
+                </div>
+              </div>
+            </div>
           </main>
           <Footer />
         </div>
