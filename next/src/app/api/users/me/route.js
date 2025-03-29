@@ -23,7 +23,7 @@ export async function GET(req) {
         totalBlogs: true,
         totalJournals: true,
         totalComments: true,
-        mentalHealthState: true,
+        mentalstate: true,
       },
     });
 
