@@ -17,12 +17,29 @@ function SignUpPage() {
     city: "",
     occupation: "",
   });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("/api/auth/signup", formData);
+      alert(response.data.message);
+      router.push("/login");
+    } catch (error) {
+      alert(error.response?.data.error || "Something went wrong!");
+    }
+  };
+
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
-      <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
+      <form
+        onSubmit={handleSubmit}
+        className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4"
+      >
         <div className="flex w-full justify-center items-center mb-6">
           <p className="text-4xl font-bold bg-gradient-to-br from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent">
             mindcare
@@ -36,6 +53,8 @@ function SignUpPage() {
               First Name
             </label>
             <input
+              name="firstName"
+              onChange={handleChange}
               type="text"
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
               required
@@ -46,6 +65,8 @@ function SignUpPage() {
               Last Name
             </label>
             <input
+              name="lastName"
+              onChange={handleChange}
               type="text"
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             />
@@ -57,6 +78,8 @@ function SignUpPage() {
             Email
           </label>
           <input
+            name="email"
+            onChange={handleChange}
             type="email"
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
@@ -68,6 +91,8 @@ function SignUpPage() {
             Password
           </label>
           <input
+            name="password"
+            onChange={handleChange}
             type="password"
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
@@ -80,6 +105,8 @@ function SignUpPage() {
               Gender
             </label>
             <select
+              name="gender"
+              onChange={handleChange}
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
               required
             >
@@ -98,6 +125,8 @@ function SignUpPage() {
               Age
             </label>
             <input
+              name="age"
+              onChange={handleChange}
               type="text"
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
               required
@@ -111,6 +140,8 @@ function SignUpPage() {
               Country
             </label>
             <input
+              name="country"
+              onChange={handleChange}
               type="text"
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
               required
@@ -121,6 +152,8 @@ function SignUpPage() {
               City
             </label>
             <input
+              name="city"
+              onChange={handleChange}
               type="text"
               className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
               required
@@ -133,6 +166,8 @@ function SignUpPage() {
             Occupation
           </label>
           <input
+            name="occupation"
+            onChange={handleChange}
             type="text"
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
