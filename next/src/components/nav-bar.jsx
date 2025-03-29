@@ -12,45 +12,45 @@ function NavBar({ currentPage = "dashboard" }) {
         <li
           className={`transition-all duration-300 ${
             isActive("dashboard")
-              ? "text-blue-500"
-              : "text-gray-600 hover:text-gray-800"
+              ? "text-purple-600 transition-transform"
+              : "text-gray-600 hover:text-purple-600 transform hover:scale-125"
           }`}
         >
           <Link href="/dashboard">
-            <LayoutDashboard size={30} />
+            <LayoutDashboard size={isActive("dashboard") ? 25 : 20} />
           </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
             isActive("journals")
-              ? "text-blue-500"
-              : "text-gray-600 hover:text-gray-800"
+              ? "text-purple-600 transition-transform"
+              : "text-gray-600 hover:text-purple-600 transform hover:scale-125"
           }`}
         >
           <Link href="/journals">
-            <NotebookPen size={30} />
+            <NotebookPen size={isActive("journals") ? 25 : 20} />
           </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
             isActive("blogs")
-              ? "text-blue-500"
-              : "text-gray-600 hover:text-gray-800"
+              ? "text-purple-600 transition-transform"
+              : "text-gray-600 hover:text-purple-600 transform hover:scale-125"
           }`}
         >
           <Link href="/blogs">
-            <BookOpenCheck size={30} />
+            <BookOpenCheck size={isActive("blogs") ? 25 : 20} />
           </Link>
         </li>
         <li
           className={`transition-all duration-300 ${
             isActive("profile")
-              ? "text-blue-500"
-              : "text-gray-600 hover:text-gray-800"
+              ? "text-purple-600 transition-transform"
+              : "text-gray-600 hover:text-purple-600 transform hover:scale-125"
           }`}
         >
           <Link href="/profile">
-            <User size={30} />
+            <User size={isActive("profile") ? 25 : 20} />
           </Link>
         </li>
       </ul>
