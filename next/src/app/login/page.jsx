@@ -26,7 +26,10 @@ function LoginPage() {
   };
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
-      <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
+      <form
+        onSubmit={handleSubmit}
+        className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4"
+      >
         <div className="flex w-full justify-center items-center mb-6">
           <p className="text-4xl font-bold bg-gradient-to-br from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent">
             mindcare
@@ -39,6 +42,8 @@ function LoginPage() {
             Email
           </label>
           <input
+            name="email"
+            onChange={handleChange}
             type="email"
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
@@ -50,6 +55,8 @@ function LoginPage() {
             Password
           </label>
           <input
+            name="password"
+            onChange={handleChange}
             type="password"
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
@@ -57,7 +64,10 @@ function LoginPage() {
         </div>
 
         <div className="w-full mt-3.5">
-          <button className="p-3 w-full bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300">
+          <button
+            type="submit"
+            className="p-3 w-full bg-transparent border border-purple-500 text-purple-500 font-semibold font-mono hover:text-white hover:bg-purple-500 transition-all duration-300"
+          >
             Login
           </button>
         </div>
