@@ -19,7 +19,7 @@ function LoginPage() {
       const response = await axios.post("/api/auth/login", formData);
       localStorage.setItem("token", response.data.token);
       alert("Login successful!");
-      router.push("/");
+      router.push("/dashboard");
     } catch (error) {
       alert(error.response?.data.error || "Invalid credentials!");
     }
