@@ -1,6 +1,24 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { SmilePlus } from "lucide-react";
 
 function SignUpPage() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    gender: "",
+    age: "",
+    country: "",
+    city: "",
+    occupation: "",
+  });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
       <form className="w-lg rounded-lg flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50 p-8 space-y-4">
