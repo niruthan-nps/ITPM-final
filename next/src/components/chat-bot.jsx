@@ -41,7 +41,7 @@ export default function Chatbot() {
   return (
     <div className="mt-12">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold">Talk to Mindcare Bot 🤖</h2>
+        <h2 className="text-2xl font-bold">AI Therapist</h2>
         <button
           onClick={clearChat}
           className="text-sm text-red-500 border border-red-300 px-3 py-1 rounded hover:bg-red-100 transition-all"
