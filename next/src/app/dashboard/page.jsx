@@ -2,6 +2,7 @@
 import NavBar from "@components/nav-bar";
 import Header from "@components/header";
 import Footer from "@components/footer";
+import Chatbot from "@components/chat-bot";
 import UserRouteProtection from "@components/user-route";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -99,6 +100,7 @@ function DashboardPage() {
                   </p>
                 </div>
               </div>
+              <Chatbot />
             </div>
           </main>
           <Footer />
