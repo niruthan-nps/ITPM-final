@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import axios from "axios";
 import { SmilePlus } from "lucide-react";
+import Link from "next/link";
 
 function LoginPage() {
   const router = useRouter();
@@ -61,6 +62,15 @@ function LoginPage() {
             className="w-full p-3 font-mono text-purple-600 bg-gray-100 border border-purple-200 focus:outline-none focus:border-purple-500"
             required
           />
+        </div>
+
+        <div className="w-full flex justify-center items-center mt-3.5">
+          <Link
+            href="/signup"
+            className="text-purple-500 text-sm font-mono hover:text-purple-700 transition-all duration-300"
+          >
+            Don't have an account? <b>Sign Up</b>
+          </Link>
         </div>
 
         <div className="w-full mt-3.5">
