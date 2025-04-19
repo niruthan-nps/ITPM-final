@@ -55,4 +55,5 @@ model Post {
   image     String? // Optional image field
   authorId  String
   author    User    @relation(fields: [authorId], references: [id], name: "AuthorPost")
+  createdAt DateTime @default(now())  
 }
