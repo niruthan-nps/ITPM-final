@@ -34,6 +34,7 @@ model User {
   totalBlogs        Int @default(0)
   totalJournals     Int @default(0)
   totalComments     Int @default(0)
+  avatarUrl String?
   journals          Journal[]          @relation("UserJournals")
   posts Post[]               @relation("AuthorPost")
 }
