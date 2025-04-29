@@ -3,15 +3,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { Button } from "@/styles/components/ui/button";
-import { Input } from "@/styles/components/ui/input";
-import { Skeleton } from "@/styles/components/ui/skeleton";
-import { Card, CardHeader, CardContent } from "@/styles/components/ui/card";
+import { Button } from "../../styles/components/ui/button";
+
+import { Input } from "../../styles/components/ui/input";
+import { Skeleton } from "../../styles/components/ui/skeleton";
+import { Card, CardHeader, CardContent } from "../../styles/components/ui/card";
 import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-} from "@/styles/components/ui/avatar";
+} from "../../styles/components/ui/avatar";
 import {
   Pagination,
   PaginationContent,
@@ -19,8 +20,8 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/styles/components/ui/pagination";
-import ImageUpload from "@/components/image-upload";
+} from "../../styles/components/ui/pagination";
+import ImageUpload from "../../components/image-upload";
 import NavBar from "@components/nav-bar";
 import Header from "@components/header";
 import Footer from "@components/footer";

@@ -1,6 +1,6 @@
 "use client";
 import { CldUploadWidget } from "next-cloudinary";
-import { Button } from "@/styles/components/ui/button";
+import { Button } from "../styles/components/ui/button";
 import { ImagePlus, Trash } from "lucide-react";
 import Image from "next/image";
 
