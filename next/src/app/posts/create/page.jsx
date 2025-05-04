@@ -2,13 +2,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { Button } from "@/styles/components/ui/button";
-import { Textarea } from "@/styles/components/ui/textarea";
-import ImageUpload from "@/components/image-upload";
-import NavBar from "@components/nav-bar";
-import Header from "@components/header";
-import Footer from "@components/footer";
-import UserRouteProtection from "@components/user-route";
+import { Button } from "../../../styles/components/ui/button";
+import { Textarea } from "../../../styles/components/ui/textarea";
+import  { ImageUpload }from "../../../components/image-upload";
+import NavBar from "../../../components/nav-bar";
+import Header from "../../../components/header";
+import Footer from "../../../components/footer";
+import UserRouteProtection from "../../../components/user-route";
 
 export default function CreatePostPage() {
   const [content, setContent] = useState("");
